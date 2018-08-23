@@ -43,8 +43,6 @@
 		CECC4762212452300061CA27 /* HttpUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtils.swift; sourceTree = "<group>"; };
 		CECC4764212472AE0061CA27 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CEE506DE2044865A00C556DD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
-		DFAC5C3C8611AAB64994A54D /* Pods-ClientSideSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientSideSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK.release.xcconfig"; sourceTree = "<group>"; };
-		E8E52DFC859ACE40F9184EDD /* Pods-ClientSideSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientSideSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,21 +56,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38B3BB5A56F3B8B78067B123 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E8E52DFC859ACE40F9184EDD /* Pods-ClientSideSDK.debug.xcconfig */,
-				DFAC5C3C8611AAB64994A54D /* Pods-ClientSideSDK.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CE99879B201340D3004E37B3 = {
 			isa = PBXGroup;
 			children = (
 				CE9987A6201340D3004E37B3 /* ClientSideLib */,
 				CE9987A5201340D3004E37B3 /* Products */,
-				38B3BB5A56F3B8B78067B123 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,13 +112,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9987B6201340D3004E37B3 /* Build configuration list for PBXNativeTarget "ClientSideLib" */;
 			buildPhases = (
-				7E1AF001E0ADF209EA8E6799 /* [CP] Check Pods Manifest.lock */,
 				CE9987A0201340D3004E37B3 /* Sources */,
 				CE9987A1201340D3004E37B3 /* Frameworks */,
 				CE9987A2201340D3004E37B3 /* Resources */,
 				CE9987CA20134105004E37B3 /* Embed Frameworks */,
-				817933BDDA750BA4F1BF66EF /* [CP] Embed Pods Frameworks */,
-				86E1354F9C37FBAACB467764 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,64 +173,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7E1AF001E0ADF209EA8E6799 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ClientSideSDK-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		817933BDDA750BA4F1BF66EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Heimdall/Heimdall.framework",
-				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Heimdall.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86E1354F9C37FBAACB467764 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE9987A0201340D3004E37B3 /* Sources */ = {
@@ -391,7 +318,6 @@
 		};
 		CE9987B7201340D3004E37B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8E52DFC859ACE40F9184EDD /* Pods-ClientSideSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,7 +333,6 @@
 		};
 		CE9987B8201340D3004E37B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFAC5C3C8611AAB64994A54D /* Pods-ClientSideSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
