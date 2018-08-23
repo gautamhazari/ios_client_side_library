@@ -7,21 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C8CC120190AB7009A67E7 /* WebViewController.swift */; };
 		CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A7201340D3004E37B3 /* AppDelegate.swift */; };
 		CE9987AA201340D3004E37B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A9201340D3004E37B3 /* ViewController.swift */; };
 		CE9987AD201340D3004E37B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987AB201340D3004E37B3 /* Main.storyboard */; };
 		CE9987AF201340D3004E37B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9987AE201340D3004E37B3 /* Assets.xcassets */; };
 		CE9987B2201340D3004E37B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987B0201340D3004E37B3 /* LaunchScreen.storyboard */; };
+		CECC4763212452300061CA27 /* HttpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4762212452300061CA27 /* HttpUtils.swift */; };
+		CECC4765212472AE0061CA27 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4764212472AE0061CA27 /* Config.swift */; };
+		CEE506DF2044865A00C556DD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE506DE2044865A00C556DD /* Config.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9987CA20134105004E37B3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		CE9987A4201340D3004E37B3 /* ClientSideSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientSideSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7C8CC120190AB7009A67E7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CE9987A4201340D3004E37B3 /* ClientSideLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientSideLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9987A7201340D3004E37B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9987A9201340D3004E37B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE9987AC201340D3004E37B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9987AE201340D3004E37B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9987B1201340D3004E37B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9987B3201340D3004E37B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECC4762212452300061CA27 /* HttpUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtils.swift; sourceTree = "<group>"; };
+		CECC4764212472AE0061CA27 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CEE506DE2044865A00C556DD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		DFAC5C3C8611AAB64994A54D /* Pods-ClientSideSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientSideSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK.release.xcconfig"; sourceTree = "<group>"; };
+		E8E52DFC859ACE40F9184EDD /* Pods-ClientSideSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientSideSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,53 +58,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38B3BB5A56F3B8B78067B123 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8E52DFC859ACE40F9184EDD /* Pods-ClientSideSDK.debug.xcconfig */,
+				DFAC5C3C8611AAB64994A54D /* Pods-ClientSideSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE99879B201340D3004E37B3 = {
 			isa = PBXGroup;
 			children = (
-				CE9987A6201340D3004E37B3 /* ClientSideSDK */,
+				CE9987A6201340D3004E37B3 /* ClientSideLib */,
 				CE9987A5201340D3004E37B3 /* Products */,
+				38B3BB5A56F3B8B78067B123 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		CE9987A5201340D3004E37B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE9987A4201340D3004E37B3 /* ClientSideSDK.app */,
+				CE9987A4201340D3004E37B3 /* ClientSideLib.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE9987A6201340D3004E37B3 /* ClientSideSDK */ = {
+		CE9987A6201340D3004E37B3 /* ClientSideLib */ = {
 			isa = PBXGroup;
 			children = (
+				CECC4769212AB1DA0061CA27 /* Controllers */,
+				CECC4761212451F40061CA27 /* Utils */,
 				CE9987A7201340D3004E37B3 /* AppDelegate.swift */,
-				CE9987A9201340D3004E37B3 /* ViewController.swift */,
 				CE9987AB201340D3004E37B3 /* Main.storyboard */,
 				CE9987AE201340D3004E37B3 /* Assets.xcassets */,
 				CE9987B0201340D3004E37B3 /* LaunchScreen.storyboard */,
 				CE9987B3201340D3004E37B3 /* Info.plist */,
+				CEE506DE2044865A00C556DD /* Config.plist */,
 			);
-			path = ClientSideSDK;
+			path = ClientSideLib;
+			sourceTree = "<group>";
+		};
+		CECC4761212451F40061CA27 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CECC4762212452300061CA27 /* HttpUtils.swift */,
+				CECC4764212472AE0061CA27 /* Config.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CECC4769212AB1DA0061CA27 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE9987A9201340D3004E37B3 /* ViewController.swift */,
+				CE7C8CC120190AB7009A67E7 /* WebViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE9987A3201340D3004E37B3 /* ClientSideSDK */ = {
+		CE9987A3201340D3004E37B3 /* ClientSideLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9987B6201340D3004E37B3 /* Build configuration list for PBXNativeTarget "ClientSideSDK" */;
+			buildConfigurationList = CE9987B6201340D3004E37B3 /* Build configuration list for PBXNativeTarget "ClientSideLib" */;
 			buildPhases = (
+				7E1AF001E0ADF209EA8E6799 /* [CP] Check Pods Manifest.lock */,
 				CE9987A0201340D3004E37B3 /* Sources */,
 				CE9987A1201340D3004E37B3 /* Frameworks */,
 				CE9987A2201340D3004E37B3 /* Resources */,
+				CE9987CA20134105004E37B3 /* Embed Frameworks */,
+				817933BDDA750BA4F1BF66EF /* [CP] Embed Pods Frameworks */,
+				86E1354F9C37FBAACB467764 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ClientSideSDK;
+			name = ClientSideLib;
 			productName = ClientSideSDK;
-			productReference = CE9987A4201340D3004E37B3 /* ClientSideSDK.app */;
+			productReference = CE9987A4201340D3004E37B3 /* ClientSideLib.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE99879F201340D3004E37B3 /* Build configuration list for PBXProject "ClientSideSDK" */;
+			buildConfigurationList = CE99879F201340D3004E37B3 /* Build configuration list for PBXProject "ClientSideLib" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE9987A3201340D3004E37B3 /* ClientSideSDK */,
+				CE9987A3201340D3004E37B3 /* ClientSideLib */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE506DF2044865A00C556DD /* Config.plist in Resources */,
 				CE9987B2201340D3004E37B3 /* LaunchScreen.storyboard in Resources */,
 				CE9987AF201340D3004E37B3 /* Assets.xcassets in Resources */,
 				CE9987AD201340D3004E37B3 /* Main.storyboard in Resources */,
@@ -131,13 +189,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7E1AF001E0ADF209EA8E6799 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClientSideSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		817933BDDA750BA4F1BF66EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Heimdall/Heimdall.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Heimdall.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86E1354F9C37FBAACB467764 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClientSideSDK/Pods-ClientSideSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE9987A0201340D3004E37B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE9987AA201340D3004E37B3 /* ViewController.swift in Sources */,
+				CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */,
+				CECC4765212472AE0061CA27 /* Config.swift in Sources */,
 				CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */,
+				CECC4763212452300061CA27 /* HttpUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,12 +391,14 @@
 		};
 		CE9987B7201340D3004E37B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E52DFC859ACE40F9184EDD /* Pods-ClientSideSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ClientSideSDK/Info.plist;
+				DEVELOPMENT_TEAM = XQYM26FG6F;
+				INFOPLIST_FILE = ClientSideLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = a1qa.ClientSideSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = a1qa.ClientSideLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -286,12 +407,14 @@
 		};
 		CE9987B8201340D3004E37B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFAC5C3C8611AAB64994A54D /* Pods-ClientSideSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ClientSideSDK/Info.plist;
+				DEVELOPMENT_TEAM = XQYM26FG6F;
+				INFOPLIST_FILE = ClientSideLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = a1qa.ClientSideSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = a1qa.ClientSideLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,7 +424,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE99879F201340D3004E37B3 /* Build configuration list for PBXProject "ClientSideSDK" */ = {
+		CE99879F201340D3004E37B3 /* Build configuration list for PBXProject "ClientSideLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9987B4201340D3004E37B3 /* Debug */,
@@ -310,7 +433,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9987B6201340D3004E37B3 /* Build configuration list for PBXNativeTarget "ClientSideSDK" */ = {
+		CE9987B6201340D3004E37B3 /* Build configuration list for PBXNativeTarget "ClientSideLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE9987B7201340D3004E37B3 /* Debug */,
