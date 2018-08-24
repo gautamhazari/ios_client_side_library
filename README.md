@@ -29,7 +29,7 @@ Note: Your client side library will work only with server side library. Please, 
 If you encounter any issues which are not resolved by consulting the resources below then [send us a message](https://developer.mobileconnect.io/content/contact-us)
 
 ## Resources
-- [MobileConnect Android Client Side Library](https://developer.mobileconnect.io/content/android-client-side-library)
+- [MobileConnect iOS Client Side Library](https://developer.mobileconnect.io/content/ios-client-side-library)
 - [MobileConnect Java Server Side Library](https://developer.mobileconnect.io/content/java-server-side-library)
 - [MobileConnect .NET Server Side Library](https://developer.mobileconnect.io/content/net-server-side-library)
 - [MobileConnect PHP Server Side Library](https://developer.mobileconnect.io/content/php-server-side-library)
