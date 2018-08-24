@@ -84,8 +84,14 @@ class ViewController: UIViewController, WKUIDelegate {
         ipAddressField.setBorders()
         ipAddressField.text = config.getIpAdress()
         msisdnField.text = self.config.getMsisdn()
-        mccField.text = self.config.getMcc()
-        mncField.text = self.config.getMnc()
+        mccField.text = getCellularInformation().mcc
+        if mccField.text!.isEmpty {
+            mccField.text = self.config.getMcc()
+        }
+        mncField.text = getCellularInformation().mnc
+        if mncField.text!.isEmpty {
+            mncField.text = self.config.getMnc()
+        }
         discoveryRequestParameters.selectedSegmentIndex = 2
     }
     
