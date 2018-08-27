@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2867AD213435B90023A83F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2867AC213435B90023A83F /* Constants.swift */; };
 		CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C8CC120190AB7009A67E7 /* WebViewController.swift */; };
 		CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A7201340D3004E37B3 /* AppDelegate.swift */; };
 		CE9987AA201340D3004E37B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A9201340D3004E37B3 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE2867AC213435B90023A83F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE7C8CC120190AB7009A67E7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE9987A4201340D3004E37B3 /* ClientSideLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientSideLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9987A7201340D3004E37B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				CECC4762212452300061CA27 /* HttpUtils.swift */,
 				CECC4764212472AE0061CA27 /* Config.swift */,
+				CE2867AC213435B90023A83F /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				CECC4765212472AE0061CA27 /* Config.swift in Sources */,
 				CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */,
 				CECC4763212452300061CA27 /* HttpUtils.swift in Sources */,
+				CE2867AD213435B90023A83F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +328,7 @@
 				DEVELOPMENT_TEAM = XQYM26FG6F;
 				INFOPLIST_FILE = ClientSideLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = a1qa.ClientSideLib;
+				PRODUCT_BUNDLE_IDENTIFIER = gsma.swift4.demoapplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,7 +343,7 @@
 				DEVELOPMENT_TEAM = XQYM26FG6F;
 				INFOPLIST_FILE = ClientSideLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = a1qa.ClientSideLib;
+				PRODUCT_BUNDLE_IDENTIFIER = gsma.swift4.demoapplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

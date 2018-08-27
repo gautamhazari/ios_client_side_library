@@ -1,11 +1,3 @@
-//
-//  Config.swift
-//  ClientSideSDK
-//
-//  Created by user on 8/15/18.
-//  Copyright © 2018 a1qa. All rights reserved.
-//
-
 import Foundation
 
 class Config{

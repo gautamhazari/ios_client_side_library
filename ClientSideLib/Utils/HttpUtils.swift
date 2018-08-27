@@ -1,11 +1,3 @@
-//
-//  HttpUtils.swift
-//  ClientSideSDK
-//
-//  Created by user on 8/15/18.
-//  Copyright © 2018 a1qa. All rights reserved.
-//
-
 import Foundation
 
 class HttpUtils {
@@ -15,5 +7,13 @@ class HttpUtils {
             URLQueryItem(name: $0, value: $1)
         }
         return components.url!
-    }   
+    }
+    
+    static func getQueryStringParameter(url: String?, param: String) -> String? {
+        if let url = url, let urlComponents = NSURLComponents(string: url), let queryItems = (urlComponents.queryItems) {
+            return queryItems.filter({ (item) in item.name == param }).first?.value!
+        }
+        return nil
+    }
+    
 }

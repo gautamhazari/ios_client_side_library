@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  ClientSideSDK
-//
-//  Created by user on 1/20/18.
-//  Copyright © 2018 a1qa. All rights reserved.
-//
-
 import UIKit
 import WebKit
 import CoreTelephony
@@ -123,7 +115,9 @@ class ViewController: UIViewController, WKUIDelegate {
             parameters["mnc"] = mnc
         }
         if let sourceIp = sourceIp {
-            parameters["sourceIp"] = sourceIp
+            if (isWithIP) {
+                parameters["sourceIp"] = sourceIp
+            }
         }
         
         return parameters
@@ -132,18 +126,13 @@ class ViewController: UIViewController, WKUIDelegate {
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         if(isMsisdnRequest) {
-            parameters = requestConstructor(msisdn: msisdnField.text)
+            parameters = requestConstructor(msisdn: msisdnField.text, sourceIp: ipAddressField.text)
         } else if (isMccMncRequest) {
-            parameters = requestConstructor(mcc: mccField.text, mnc: mncField.text)
-        } else if (isWithIP) {
-            parameters = requestConstructor(sourceIp: ipAddressField.text)
+            parameters = requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: ipAddressField.text)
+        } else {
+            parameters = requestConstructor(sourceIp: ipAddressField.text)            
         }
-//        request("http://172.19.2.247:8080/server_side_api/start_discovery?msisdn=447700900901").validate().responseJSON { response in
-//        request("https://operator-b.sandbox.mobileconnect.io/oidc/operator-b/jwks.json").validate().responseString { responseString in
-//        url = URL (string: "https://operator-b.sandbox.mobileconnect.io/oidc/operator-b/jwks.json");
-//        url = URL (string: "http://172.19.2.20:8080/server_side_api/start_discovery?msisdn=447700900901");
         url = HttpUtils.createUrlWithParams(url:config.getEndpoint(), params:parameters)
-       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
