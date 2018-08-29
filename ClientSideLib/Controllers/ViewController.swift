@@ -74,7 +74,11 @@ class ViewController: UIViewController, WKUIDelegate {
         mccField.setBorders()
         mncField.setBorders()
         ipAddressField.setBorders()
-        ipAddressField.text = config.getIpAdress()
+        if let addr = NetworkUtils.getIPAddress() {
+            ipAddressField.text = addr
+        } else {
+            ipAddressField.text = config.getIpAdress()
+        }
         msisdnField.text = self.config.getMsisdn()
         mccField.text = getCellularInformation().mcc
         if mccField.text!.isEmpty {
@@ -93,15 +97,15 @@ class ViewController: UIViewController, WKUIDelegate {
     }
     
     func getCellularInformation() -> (mcc: String, mnc: String){
-        let phoneInfo = CTTelephonyNetworkInfo()
-        let phoneCarrier = phoneInfo.subscriberCellularProvider
-        if phoneCarrier != nil {
-            self.mcc = (phoneCarrier?.mobileCountryCode)!
-            self.mnc = (phoneCarrier?.mobileNetworkCode)!
-            return (mcc, mnc)
+        let networkInfo =  CTTelephonyNetworkInfo()
+        if let carrier = networkInfo.subscriberCellularProvider {
+            let mcc = carrier.mobileCountryCode
+            let mnc = carrier.mobileNetworkCode
+            return(mcc!, mnc!)
+        } else {
+            return("", "")
         }
-        return ("", "")
-    }    
+    }
 
     func requestConstructor(msisdn: String? = nil, mcc: String? = nil, mnc: String? = nil, sourceIp: String? = nil)-> [String : String] {
         var parameters : [String : String] = [:]
