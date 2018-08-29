@@ -96,15 +96,15 @@ class ViewController: UIViewController, WKUIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // use this code if you need to get operator mcc mnc
     func getCellularInformation() -> (mcc: String, mnc: String){
-        let networkInfo =  CTTelephonyNetworkInfo()
-        if let carrier = networkInfo.subscriberCellularProvider {
-            let mcc = carrier.mobileCountryCode
-            let mnc = carrier.mobileNetworkCode
-            return(mcc!, mnc!)
-        } else {
-            return("", "")
-        }
+//        let networkInfo =  CTTelephonyNetworkInfo()
+//        if let carrier = networkInfo.subscriberCellularProvider {
+//            let mcc = carrier.mobileCountryCode
+//            let mnc = carrier.mobileNetworkCode
+//            return(mcc!, mnc!)
+//        }
+        return("", "")
     }
 
     func requestConstructor(msisdn: String? = nil, mcc: String? = nil, mnc: String? = nil, sourceIp: String? = nil)-> [String : String] {
