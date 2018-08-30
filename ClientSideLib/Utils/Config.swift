@@ -2,11 +2,11 @@ import Foundation
 
 class Config{
    
-    var mcc = ""
-    var mnc = ""
-    var msisdn = ""
-    var ipAdress = ""
-    var serverEndpoint = ""
+    var mcc = EMPTY
+    var mnc = EMPTY
+    var msisdn = EMPTY
+    var ipAdress = EMPTY
+    var serverEndpoint = EMPTY
     var serverTimeout = 0.0
     
     init(){
@@ -14,7 +14,7 @@ class Config{
             mcc = dict["mcc_value"] as! String
             mnc = dict["mnc_value"] as! String
             msisdn = dict["msisdn"] as! String
-            ipAdress = dict["ip_adress"] as! String
+            ipAdress = dict["ip_address"] as! String
             serverEndpoint = dict["server_endpoint"] as! String
             serverTimeout = (dict["server_timeout"] as! NSString).doubleValue
         }

@@ -4,7 +4,7 @@
 <dict>
 	<key>server_timeout</key>
 	<string>20</string>
-	<key>ip_adress</key>
+	<key>ip_address</key>
 	<string>10.0.0.1</string>
 	<key>mnc_value</key>
 	<string>01</string>

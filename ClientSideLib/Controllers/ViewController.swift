@@ -1,6 +1,5 @@
 import UIKit
 import WebKit
-import CoreTelephony
 
 extension UITextField {
     func setBorders() {
@@ -14,9 +13,9 @@ class ViewController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
     var config = Config()
-    var url = URL (string: "");
-    var mcc: String = ""
-    var mnc: String = ""
+    var url = URL (string: EMPTY);
+    var mcc: String = EMPTY
+    var mnc: String = EMPTY
     var isMsisdnRequest: Bool = false
     var isMccMncRequest: Bool = false
     var isWithIP: Bool = false
@@ -74,21 +73,26 @@ class ViewController: UIViewController, WKUIDelegate {
         mccField.setBorders()
         mncField.setBorders()
         ipAddressField.setBorders()
+        setValues()
+        discoveryRequestParameters.selectedSegmentIndex = 2
+    }
+    
+    func setValues() {
         if let addr = NetworkUtils.getIPAddress() {
             ipAddressField.text = addr
         } else {
             ipAddressField.text = config.getIpAdress()
         }
         msisdnField.text = self.config.getMsisdn()
-        mccField.text = getCellularInformation().mcc
+        mccField.text = NetworkUtils.getCellularInformation().mcc
         if mccField.text!.isEmpty {
             mccField.text = self.config.getMcc()
         }
-        mncField.text = getCellularInformation().mnc
+        mncField.text = NetworkUtils.getCellularInformation().mnc
         if mncField.text!.isEmpty {
             mncField.text = self.config.getMnc()
         }
-        discoveryRequestParameters.selectedSegmentIndex = 2
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,45 +100,14 @@ class ViewController: UIViewController, WKUIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // use this code if you need to get operator mcc mnc
-    func getCellularInformation() -> (mcc: String, mnc: String){
-//        let networkInfo =  CTTelephonyNetworkInfo()
-//        if let carrier = networkInfo.subscriberCellularProvider {
-//            let mcc = carrier.mobileCountryCode
-//            let mnc = carrier.mobileNetworkCode
-//            return(mcc!, mnc!)
-//        }
-        return("", "")
-    }
-
-    func requestConstructor(msisdn: String? = nil, mcc: String? = nil, mnc: String? = nil, sourceIp: String? = nil)-> [String : String] {
-        var parameters : [String : String] = [:]
-        if let msisdn = msisdn {
-            parameters["msisdn"] = msisdn
-        }
-        if let mcc = mcc {
-            parameters["mcc"] = mcc
-        }
-        if let mnc = mnc {
-            parameters["mnc"] = mnc
-        }
-        if let sourceIp = sourceIp {
-            if (isWithIP) {
-                parameters["sourceIp"] = sourceIp
-            }
-        }
-        
-        return parameters
-    }
-    
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         if(isMsisdnRequest) {
-            parameters = requestConstructor(msisdn: msisdnField.text, sourceIp: ipAddressField.text)
+            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : EMPTY)
         } else if (isMccMncRequest) {
-            parameters = requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: ipAddressField.text)
+            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : EMPTY)
         } else {
-            parameters = requestConstructor(sourceIp: ipAddressField.text)            
+            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : EMPTY)
         }
         url = HttpUtils.createUrlWithParams(url:config.getEndpoint(), params:parameters)
     }

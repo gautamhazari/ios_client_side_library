@@ -3,7 +3,7 @@ import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate  {
     
-    var url = URL (string: "")
+    var url = URL (string: EMPTY)
     var config = Config()
     var timeOut: Timer!
     @IBOutlet weak var ResultWebView: WKWebView!
@@ -39,20 +39,20 @@ class WebViewController: UIViewController, WKNavigationDelegate  {
     }
     
     @objc private func cancelWeb() {
-        let alert = UIAlertController(title: "Error", message: "Connection timeout", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: ERROR, message: CONN_TIMEOUT, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: OK, style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     @objc private func authOk() {
-        let alert = UIAlertController(title: "Success", message: "You're authenticated successfully", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: SUCCESS, message: AUTH_SUCCESS, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: OK, style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     @objc private func authFailed(message: String) {
-        let alert = UIAlertController(title: "Fail", message: "Authentication failed, error=\(message)", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: FAIL, message: String(format: MSG_FORMAT, AUTH_ERROR, message), preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: OK, style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
