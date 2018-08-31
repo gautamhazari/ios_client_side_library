@@ -23,6 +23,7 @@ class ViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var msisdnField: UITextField!
     @IBOutlet weak var discoveryRequestParameters: UISegmentedControl!
     
+    @IBOutlet weak var ui_scrollView: UIScrollView!
     @IBOutlet weak var mccField: UITextField!
     @IBOutlet weak var mncField: UITextField!
     
@@ -75,6 +76,7 @@ class ViewController: UIViewController, WKUIDelegate {
         ipAddressField.setBorders()
         setValues()
         discoveryRequestParameters.selectedSegmentIndex = 2
+
     }
     
     func setValues() {
@@ -119,4 +121,5 @@ class ViewController: UIViewController, WKUIDelegate {
             }
         }
     }
+    
 }
