@@ -9,6 +9,18 @@ extension UITextField {
     }
 }
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboardView))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+     @objc func dismissKeyboardView() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
@@ -29,7 +41,7 @@ class ViewController: UIViewController, WKUIDelegate {
     
     @IBOutlet weak var withIPAddressSwitch: UISwitch!
     @IBOutlet weak var ipAddressField: UITextField!
-   
+    
     @IBAction func discoveryParametersTapped(_ sender: Any) {
         if discoveryRequestParameters.selectedSegmentIndex == 0 {
             UIView.transition(with: self.msisdnField, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
@@ -76,7 +88,7 @@ class ViewController: UIViewController, WKUIDelegate {
         ipAddressField.setBorders()
         setValues()
         discoveryRequestParameters.selectedSegmentIndex = 2
-
+        self.hideKeyboardWhenTappedAround()
     }
     
     func setValues() {
@@ -121,5 +133,5 @@ class ViewController: UIViewController, WKUIDelegate {
             }
         }
     }
-
+  
 }
