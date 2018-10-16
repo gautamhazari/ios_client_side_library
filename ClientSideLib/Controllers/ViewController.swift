@@ -106,7 +106,6 @@ class ViewController: UIViewController, WKUIDelegate {
         if mncField.text!.isEmpty {
             mncField.text = self.config.getMnc()
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
