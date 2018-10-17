@@ -1,18 +1,12 @@
 import UIKit
 import WebKit
 
-extension String {
-    mutating func addString(str: String, separator: String) {
-        self = self + separator + str
-    }
-}
-
 class WebViewController: UIViewController, WKNavigationDelegate  {
     
     var url = URL (string: EMPTY)
     var config = Config()
     var timeOut: Timer!
-    var iosVersion = "\(IOS_NAME)\(SPACE)\(UIDevice.current.systemVersion)"
+    var iosVersion = "\(IOS_NAME)\(SEPARATOR)\(UIDevice.current.systemVersion)"
     
     @IBOutlet weak var ResultWebView: WKWebView!
     
@@ -23,7 +17,6 @@ class WebViewController: UIViewController, WKNavigationDelegate  {
         ResultWebView.navigationDelegate = self
         ResultWebView.load(aRequest)
     }
-
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
         self.timeOut.invalidate()

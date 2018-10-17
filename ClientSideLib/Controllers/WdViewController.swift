@@ -33,4 +33,5 @@ class WdViewController: UIViewController, WKUIDelegate {
     func setValues() {
         textView.text = self.config.getSubId()
     }
+    
 }

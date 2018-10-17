@@ -24,7 +24,7 @@ public let AUTH_SUCCESS = "You was authenticated successfully"
 public let AUTH_ERROR = "Authentication failed, error"
 public let MSG_FORMAT = "%@ = %@"
 public let EMPTY = ""
-public let SPACE = " "
+public let SEPARATOR = "-"
 
 public let IOS_NAME = "iOS"
 public let VERS_HEADER = "Client-Side-Version"

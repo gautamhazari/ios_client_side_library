@@ -124,11 +124,11 @@ class ViewController: UIViewController, WKUIDelegate {
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         if(isMsisdnRequest) {
-            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : EMPTY)
+            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : nil)
         } else if (isMccMncRequest) {
-            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : EMPTY)
+            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : nil)
         } else {
-            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : EMPTY)
+            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : nil)
         }
         url = HttpUtils.createUrlWithParams(url:config.getEndpoint(), params:parameters)
     }
