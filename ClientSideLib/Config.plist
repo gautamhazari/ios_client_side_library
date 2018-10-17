@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Java endpoint</key>
-	<string>http://35.176.148.159:8080/server_side_api/start_discovery</string>
 	<key>server_timeout</key>
 	<string>20</string>
 	<key>ip_address</key>
@@ -13,7 +11,9 @@
 	<key>mcc_value</key>
 	<string>901</string>
 	<key>server_endpoint</key>
-	<string>http://35.176.148.159:8083/php-server-side-library/public/start_discovery</string>
+	<string>http://35.176.148.159:8080/server_side_api/start_discovery</string>
+	<key>wd_server_endpoint</key>
+	<string>http://35.176.148.159:8083/php-server-side-library/public/start_authentication_wd</string>
 	<key>msisdn</key>
 	<string>447700900901</string>
 	<key>subId</key>

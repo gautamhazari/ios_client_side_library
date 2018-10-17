@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1758A7217625D400D2CE80 /* WdViewController.swift */; };
 		CE2867AD213435B90023A83F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2867AC213435B90023A83F /* Constants.swift */; };
 		CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C8CC120190AB7009A67E7 /* WebViewController.swift */; };
 		CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A7201340D3004E37B3 /* AppDelegate.swift */; };
@@ -15,7 +16,6 @@
 		CE9987AF201340D3004E37B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9987AE201340D3004E37B3 /* Assets.xcassets */; };
 		CE9987B2201340D3004E37B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987B0201340D3004E37B3 /* LaunchScreen.storyboard */; };
 		CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC260C52135A01F0046BF7D /* NetworkUtils.swift */; };
-		CECB9D48217617FF00BAE342 /* WithoutDiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB9D47217617FF00BAE342 /* WithoutDiscViewController.swift */; };
 		CECC4763212452300061CA27 /* HttpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4762212452300061CA27 /* HttpUtils.swift */; };
 		CECC4765212472AE0061CA27 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4764212472AE0061CA27 /* Config.swift */; };
 		CEE506DF2044865A00C556DD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE506DE2044865A00C556DD /* Config.plist */; };
@@ -35,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE1758A7217625D400D2CE80 /* WdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WdViewController.swift; sourceTree = "<group>"; };
 		CE2867AC213435B90023A83F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE7C8CC120190AB7009A67E7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE9987A4201340D3004E37B3 /* ClientSideLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientSideLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +46,6 @@
 		CE9987B1201340D3004E37B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9987B3201340D3004E37B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC260C52135A01F0046BF7D /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
-		CECB9D47217617FF00BAE342 /* WithoutDiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutDiscViewController.swift; sourceTree = "<group>"; };
 		CECC4762212452300061CA27 /* HttpUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtils.swift; sourceTree = "<group>"; };
 		CECC4764212472AE0061CA27 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CEE506DE2044865A00C556DD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -107,9 +107,9 @@
 		CECC4769212AB1DA0061CA27 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE1758A7217625D400D2CE80 /* WdViewController.swift */,
 				CE9987A9201340D3004E37B3 /* ViewController.swift */,
 				CE7C8CC120190AB7009A67E7 /* WebViewController.swift */,
-				CECB9D47217617FF00BAE342 /* WithoutDiscViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB9D48217617FF00BAE342 /* WithoutDiscViewController.swift in Sources */,
 				CE9987AA201340D3004E37B3 /* ViewController.swift in Sources */,
 				CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */,
 				CECC4765212472AE0061CA27 /* Config.swift in Sources */,
+				CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */,
 				CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */,
 				CECC4763212452300061CA27 /* HttpUtils.swift in Sources */,
 				CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */,
