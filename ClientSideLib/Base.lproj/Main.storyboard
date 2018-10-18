@@ -37,7 +37,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRR-6a-uFO">
                                 <rect key="frame" x="50" y="249" width="275" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Without demo app"/>
+                                <state key="normal" title="Demo App (without Discovery) "/>
                                 <connections>
                                     <segue destination="q6g-k0-aac" kind="show" id="eNP-T4-il3"/>
                                 </connections>
@@ -45,7 +45,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUy-fb-287">
                                 <rect key="frame" x="50" y="187" width="275" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Demo app"/>
+                                <state key="normal" title="Demo App (with Discovery) "/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="fTb-49-b5c"/>
                                 </connections>
