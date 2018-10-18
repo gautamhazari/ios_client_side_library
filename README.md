@@ -8,7 +8,7 @@ Note: if you operate in the EU then you should use EU Discovery Service domain i
 
 ## Pre-requisites
 - Swift 4.0
-- Xcode 9
+- Xcode 8
 
 ## Quick Start
 - Open the configuration file: (ClientSideLib/Config.plist).
