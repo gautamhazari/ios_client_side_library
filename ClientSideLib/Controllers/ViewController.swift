@@ -9,6 +9,14 @@ extension UITextField {
     }
 }
 
+extension UITextView {
+    func setBorders() {
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 5
+    }
+}
+
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboardView))
@@ -106,7 +114,6 @@ class ViewController: UIViewController, WKUIDelegate {
         if mncField.text!.isEmpty {
             mncField.text = self.config.getMnc()
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,11 +124,11 @@ class ViewController: UIViewController, WKUIDelegate {
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         if(isMsisdnRequest) {
-            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : EMPTY)
+            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : nil)
         } else if (isMccMncRequest) {
-            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : EMPTY)
+            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : nil)
         } else {
-            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : EMPTY)
+            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : nil)
         }
         url = HttpUtils.createUrlWithParams(url:config.getEndpoint(), params:parameters)
     }

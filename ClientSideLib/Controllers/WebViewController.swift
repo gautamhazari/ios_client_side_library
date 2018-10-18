@@ -6,14 +6,17 @@ class WebViewController: UIViewController, WKNavigationDelegate  {
     var url = URL (string: EMPTY)
     var config = Config()
     var timeOut: Timer!
+    var iosVersion = "\(IOS_NAME)\(SEPARATOR)\(UIDevice.current.systemVersion)"
+    
     @IBOutlet weak var ResultWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ResultWebView.navigationDelegate = self;
-        ResultWebView.load(URLRequest(url: url!))
+        var aRequest = URLRequest(url: url!)
+        aRequest.setValue(iosVersion, forHTTPHeaderField: VERS_HEADER)
+        ResultWebView.navigationDelegate = self
+        ResultWebView.load(aRequest)
     }
-
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
         self.timeOut.invalidate()

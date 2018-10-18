@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1758A7217625D400D2CE80 /* WdViewController.swift */; };
 		CE2867AD213435B90023A83F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2867AC213435B90023A83F /* Constants.swift */; };
 		CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C8CC120190AB7009A67E7 /* WebViewController.swift */; };
 		CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A7201340D3004E37B3 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE1758A7217625D400D2CE80 /* WdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WdViewController.swift; sourceTree = "<group>"; };
 		CE2867AC213435B90023A83F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE7C8CC120190AB7009A67E7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE9987A4201340D3004E37B3 /* ClientSideLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientSideLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 		CECC4769212AB1DA0061CA27 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE1758A7217625D400D2CE80 /* WdViewController.swift */,
 				CE9987A9201340D3004E37B3 /* ViewController.swift */,
 				CE7C8CC120190AB7009A67E7 /* WebViewController.swift */,
 			);
@@ -188,6 +191,7 @@
 				CE9987AA201340D3004E37B3 /* ViewController.swift in Sources */,
 				CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */,
 				CECC4765212472AE0061CA27 /* Config.swift in Sources */,
+				CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */,
 				CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */,
 				CECC4763212452300061CA27 /* HttpUtils.swift in Sources */,
 				CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */,
