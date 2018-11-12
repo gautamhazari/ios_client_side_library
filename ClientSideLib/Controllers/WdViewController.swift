@@ -11,7 +11,7 @@ class WdViewController: UIViewController, WKUIDelegate {
     
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
-        parameters = NetworkUtils.requestConstructor(subId:textView.text)
+        parameters = NetworkUtils.requestConstructor(msisdn:textView.text)
         url = HttpUtils.createUrlWithParams(url:config.getWdEndpoint(), params:parameters)
     }
     
@@ -31,7 +31,7 @@ class WdViewController: UIViewController, WKUIDelegate {
     }
     
     func setValues() {
-        textView.text = self.config.getSubId()
+        textView.text = self.config.getMsisdnWd()
     }
     
 }
