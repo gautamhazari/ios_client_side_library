@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1758A7217625D400D2CE80 /* WdViewController.swift */; };
 		CE2867AD213435B90023A83F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2867AC213435B90023A83F /* Constants.swift */; };
+		CE4D6CE221D3C1A100D1B3F4 /* BaseWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D6CE121D3C1A100D1B3F4 /* BaseWebController.swift */; };
+		CE4D6CE621D3C5C600D1B3F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D6CE521D3C5C600D1B3F4 /* BaseViewController.swift */; };
 		CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C8CC120190AB7009A67E7 /* WebViewController.swift */; };
 		CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A7201340D3004E37B3 /* AppDelegate.swift */; };
 		CE9987AA201340D3004E37B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9987A9201340D3004E37B3 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		CE1758A7217625D400D2CE80 /* WdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WdViewController.swift; sourceTree = "<group>"; };
 		CE2867AC213435B90023A83F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE4D6CE121D3C1A100D1B3F4 /* BaseWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebController.swift; sourceTree = "<group>"; };
+		CE4D6CE521D3C5C600D1B3F4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE7C8CC120190AB7009A67E7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE9987A4201340D3004E37B3 /* ClientSideLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientSideLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9987A7201340D3004E37B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		CE99879B201340D3004E37B3 = {
 			isa = PBXGroup;
 			children = (
+				CED4E0D521C3D2A900C86302 /* Application */,
 				CE9987A6201340D3004E37B3 /* ClientSideLib */,
 				CE9987A5201340D3004E37B3 /* Products */,
 			);
@@ -81,7 +86,8 @@
 		CE9987A6201340D3004E37B3 /* ClientSideLib */ = {
 			isa = PBXGroup;
 			children = (
-				CECC4769212AB1DA0061CA27 /* Controllers */,
+				CE4D6CE521D3C5C600D1B3F4 /* BaseViewController.swift */,
+				CE4D6CE121D3C1A100D1B3F4 /* BaseWebController.swift */,
 				CECC4761212451F40061CA27 /* Utils */,
 				CE9987A7201340D3004E37B3 /* AppDelegate.swift */,
 				CE9987AB201340D3004E37B3 /* Main.storyboard */,
@@ -112,6 +118,14 @@
 				CE7C8CC120190AB7009A67E7 /* WebViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CED4E0D521C3D2A900C86302 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CECC4769212AB1DA0061CA27 /* Controllers */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9987AA201340D3004E37B3 /* ViewController.swift in Sources */,
+				CE4D6CE221D3C1A100D1B3F4 /* BaseWebController.swift in Sources */,
 				CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */,
 				CECC4765212472AE0061CA27 /* Config.swift in Sources */,
 				CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */,
+				CE4D6CE621D3C5C600D1B3F4 /* BaseViewController.swift in Sources */,
 				CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */,
 				CECC4763212452300061CA27 /* HttpUtils.swift in Sources */,
 				CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */,

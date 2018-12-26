@@ -1,12 +1,17 @@
 import Foundation
+import UIKit
 
 class HttpUtils {
-    static func createUrlWithParams(url:String, params: [String: String]) -> URL {
+    static let iosVersion = "\(IOS_NAME)\(SEPARATOR)\(UIDevice.current.systemVersion)";
+    
+    static func createRequestWithParams(url:String, params: [String: String]?) -> URLRequest {
         var components = URLComponents(string: url)!
-        components.queryItems = params.map {
-            URLQueryItem(name: $0, value: $1)
+            if let params = params {
+                components.queryItems = params.map {
+                URLQueryItem(name: $0, value: $1)
+            }
         }
-        return components.url!
+        return createRequestFromUrl(url: components.url!)
     }
     
     static func getQueryStringParameter(url: String?, param: String) -> String? {
@@ -16,4 +21,9 @@ class HttpUtils {
         return nil
     }
     
+    private static func createRequestFromUrl(url: URL?) -> URLRequest {
+        var aRequest = URLRequest(url: url!)
+        aRequest.setValue(iosVersion, forHTTPHeaderField: VERS_HEADER)
+        return aRequest
+    }
 }

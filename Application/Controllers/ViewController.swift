@@ -1,39 +1,8 @@
 import UIKit
 import WebKit
 
-extension UITextField {
-    func setBorders() {
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.cornerRadius = 5
-    }
-}
-
-extension UITextView {
-    func setBorders() {
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.cornerRadius = 5
-    }
-}
-
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboardView))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
+class ViewController: BaseViewController {
     
-     @objc func dismissKeyboardView() {
-        view.endEditing(true)
-    }
-}
-
-class ViewController: UIViewController, WKUIDelegate {
-    
-    var webView: WKWebView!
-    var config = Config()
-    var url = URL (string: EMPTY);
     var mcc: String = EMPTY
     var mnc: String = EMPTY
     var isMsisdnRequest: Bool = false
@@ -115,12 +84,7 @@ class ViewController: UIViewController, WKUIDelegate {
             mncField.text = self.config.getMnc()
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+  
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         if(isMsisdnRequest) {
@@ -130,13 +94,13 @@ class ViewController: UIViewController, WKUIDelegate {
         } else {
             parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : nil)
         }
-        url = HttpUtils.createUrlWithParams(url:config.getEndpoint(), params:parameters)
+        request = HttpUtils.createRequestWithParams(url:config.getEndpoint(), params:parameters)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowResultSegue" {
             if let destinationVC = segue.destination as? WebViewController {
-                    destinationVC.url = url
+                    destinationVC.request = request
             }
         }
     }
