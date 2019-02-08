@@ -3,7 +3,7 @@
 Make the following steps:
 - Register an account or login to the Mobile Connect Developer Portal and create an application to get your sandbox credentials.
 - Download the client side library.
-- Configure your project. Please reference the [demo application](/ios_client_side_library).
+- Configure your project. Please reference the [iOS library](https://github.com/Mobile-Connect/ios_client_side_library).
 - Build and run the application.
 
 Application has two modes:
