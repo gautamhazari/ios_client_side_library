@@ -17,7 +17,7 @@ Note: if you operate in the EU then you should use EU Discovery Service domain i
 
 Note: you can not change the Server side endpoint while application is running. 
 
-You can also configure your MSISDN, MCC and MNC, IP address for With Discovery App if it's necessary. Also you can configure MSISDN for Without Discovery App. The parameters listed above can be changed while application is running(except Server side endpoints).
+You can also configure your MSISDN, MCC and MNC, IP address for With Discovery App if it's necessary or you can configure MSISDN for Without Discovery App. The parameters listed above can be changed while application is running(except Server side endpoints).
 
 - Build the Application.
 - With your configuration specified in the configuration file and using user interface, you have everything you need to make a successful call to the server side library by pressing 'Mobile Connect' button.
