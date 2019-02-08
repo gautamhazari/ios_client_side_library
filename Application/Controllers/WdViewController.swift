@@ -1,24 +1,20 @@
 import UIKit
 import WebKit
 
-class WdViewController: UIViewController, WKUIDelegate {
+class WdViewController: BaseViewController {
     
-    var webView: WKWebView!
-    var config = Config()
-    var url = URL (string: EMPTY);
-        
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         parameters = NetworkUtils.requestConstructor(msisdn:textView.text)
-        url = HttpUtils.createUrlWithParams(url:config.getWdEndpoint(), params:parameters)
+        request = HttpUtils.createRequestWithParams(url:config.getWdEndpoint(), params:parameters)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WdResultSegue" {
             if let destinationVC = segue.destination as? WebViewController {
-                destinationVC.url = url
+                destinationVC.request = request
             }
         }
     }
