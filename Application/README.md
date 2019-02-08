@@ -3,7 +3,7 @@
 Make the following steps:
 - Register an account or login to the Mobile Connect Developer Portal and create an application to get your sandbox credentials.
 - Download the client side library.
-- Configure your project. Please reference the [demo application](../).
+- Configure your project. Please reference the [demo application](./Application/).
 - Build and run the application.
 
 Application has two modes:
@@ -40,4 +40,4 @@ Here you can find session status.
 Please check 'References' item to navigate details like source code.
 
 # References
-- [Android library](https://developer.mobileconnect.io/ios-library-setup)
+- [iOS library](https://developer.mobileconnect.io/ios-library-setup)
