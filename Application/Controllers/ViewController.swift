@@ -46,7 +46,6 @@ class ViewController: BaseViewController {
             }, completion: nil)
         }
     }
-    
     @IBAction func ipAdressTapped(_ sender: Any) {
         if (withIPAddressSwitch.isOn) {
             self.ipAddressField.isHidden = false
