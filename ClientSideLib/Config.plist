@@ -5,18 +5,18 @@
 	<key>server_timeout</key>
 	<string>20</string>
 	<key>ip_address</key>
-	<string>10.0.0.1</string>
+	<string></string>
 	<key>mnc_value</key>
-	<string>01</string>
+	<string></string>
 	<key>mcc_value</key>
-	<string>903</string>
+	<string></string>
 	<key>server_endpoint</key>
-	<string>http://3.8.5.176:8080/mobile-connect/server_side_api/start_discovery</string>
+	<string>http://3.8.5.176:8080/mobile-connect-uk/server_side_api/start_discovery</string>
 	<key>server_endpoint_wd</key>
-	<string>http://3.8.5.176:8080/mobile-connect/server_side_api/start_discovery_manually</string>
+	<string></string>
 	<key>msisdn</key>
-	<string>447700900301</string>
+	<string></string>
 	<key>msisdn_wd</key>
-	<string>447700900391</string>
+	<string></string>
 </dict>
 </plist>
