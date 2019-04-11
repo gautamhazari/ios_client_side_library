@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class HttpUtils {
-    static let iosVersion = "\(IOS_NAME)\(SEPARATOR)\(UIDevice.current.systemVersion)";
+    static let iosVersion = "\(IOS_NAME)\(SEPARATOR)\0.0.0";
     
     static func createRequestWithParams(url:String, params: [String: String]?) -> URLRequest {
         var components = URLComponents(string: url)!

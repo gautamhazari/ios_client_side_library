@@ -9,9 +9,8 @@ class BaseWebController: UIViewController, WKNavigationDelegate  {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
         self.timeOut.invalidate()
         if let text = webView.url?.absoluteString{
-            if HttpUtils.getQueryStringParameter(url: text, param: Status.authOk.rawValue) != nil {
-                authOk()
-            }
+            authOk()
+            
             if let err = HttpUtils.getQueryStringParameter(url: text, param: Status.error.rawValue) {
                 authFailed(message:err)
             }
@@ -36,9 +35,7 @@ class BaseWebController: UIViewController, WKNavigationDelegate  {
     }
 
     @objc private func authOk() {
-        let alert = UIAlertController(title: SUCCESS, message: AUTH_SUCCESS, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: OK, style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        
     }
 
     @objc private func authFailed(message: String) {
