@@ -21,7 +21,7 @@ class ViewController: BaseViewController {
     
     @IBAction func discoveryParametersTapped(_ sender: Any) {
         if discoveryRequestParameters.selectedSegmentIndex == 0 {
-            UIView.transition(with: self.msisdnField, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+            UIView.transition(with: self.msisdnField, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
                 self.mccField.isHidden = true
                 self.mncField.isHidden = true
                 self.msisdnField.isHidden = false
@@ -29,7 +29,7 @@ class ViewController: BaseViewController {
             isMsisdnRequest = true
             isMccMncRequest = false
         } else if discoveryRequestParameters.selectedSegmentIndex == 1 {
-            UIView.transition(with: self.mccField, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+            UIView.transition(with: self.mccField, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
                 self.mccField.isHidden = false
                 self.mncField.isHidden = false
                 self.msisdnField.isHidden = true
@@ -39,7 +39,7 @@ class ViewController: BaseViewController {
         } else {
             isMsisdnRequest = false
             isMccMncRequest = false
-            UIView.transition(with: self.msisdnField, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+            UIView.transition(with: self.msisdnField, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
                 self.mccField.isHidden = true
                 self.mncField.isHidden = true
                 self.msisdnField.isHidden = true
