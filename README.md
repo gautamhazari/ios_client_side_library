@@ -36,4 +36,3 @@ If you encounter any issues which are not resolved by consulting the resources b
 - [MobileConnect Authentication API Information](https://developer.mobileconnect.io/mobile-connect-api)
 - [MobileConnect Authentication API (v2.0) Information](https://developer.mobileconnect.io/mobile-connect-profile-v2-0)
 - [MobileConnect Discovery API Information](https://developer.mobileconnect.io/discovery-api)
-

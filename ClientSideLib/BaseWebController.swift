@@ -30,20 +30,20 @@ class BaseWebController: UIViewController, WKNavigationDelegate  {
     }
 
     @objc private func cancelWeb() {
-        let alert = UIAlertController(title: ERROR, message: CONN_TIMEOUT, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: OK, style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: ERROR, message: CONN_TIMEOUT, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: OK, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 
     @objc private func authOk() {
-        let alert = UIAlertController(title: SUCCESS, message: AUTH_SUCCESS, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: OK, style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: SUCCESS, message: AUTH_SUCCESS, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: OK, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 
     @objc private func authFailed(message: String) {
-        let alert = UIAlertController(title: FAIL, message: String(format: MSG_FORMAT, AUTH_ERROR, message), preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: OK, style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: FAIL, message: String(format: MSG_FORMAT, AUTH_ERROR, message), preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: OK, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
