@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="cgI-iY-iDR" kind="relationship" relationship="rootViewController" id="9c4-gc-4ao"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BKs-bs-V38"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12y-b4-wl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,9 +38,6 @@
                                 <rect key="frame" x="50" y="187" width="275" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Demo App (with Discovery) "/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="fTb-49-b5c"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select testing mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCp-Ir-QZf">
                                 <rect key="frame" x="93" y="137" width="189" height="18"/>
@@ -57,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj8-rG-CGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-903" y="38"/>
+            <point key="canvasLocation" x="-983" y="317"/>
         </scene>
         <!--navigation-->
         <scene sceneID="tne-QT-ifu">
@@ -70,7 +67,7 @@
                             <scrollView contentMode="top" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="2" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Wud-Ff-MtX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="top" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6oX-o4-1RA">
+                                    <segmentedControl opaque="NO" contentMode="top" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6oX-o4-1RA">
                                         <rect key="frame" x="11" y="45" width="353" height="29"/>
                                         <color key="backgroundColor" red="0.98095840544944257" green="0.99488333351622327" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <segments>

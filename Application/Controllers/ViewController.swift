@@ -60,11 +60,18 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         msisdnField.setBorders()
+        if (msisdnField.text == "") {
+            msisdnField.layer.borderWidth = 2.0
+            msisdnField.attributedPlaceholder = NSAttributedString(string:"Ex:447700900301 (including country code)", attributes:[NSAttributedString.Key.foregroundColor: UIColor.black,NSAttributedString.Key.font :UIFont(name: "Arial", size: 10)!])        }
         mccField.setBorders()
         mncField.setBorders()
         ipAddressField.setBorders()
         setValues()
-        discoveryRequestParameters.selectedSegmentIndex = 2
+        discoveryRequestParameters.selectedSegmentIndex = 0
+        UIView.transition(with: self.msisdnField, duration: 0.5, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+            self.msisdnField.isHidden = false
+        }, completion: nil)
+        isMsisdnRequest = true
         self.hideKeyboardWhenTappedAround()
     }
     
