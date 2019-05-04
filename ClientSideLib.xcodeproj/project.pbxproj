@@ -17,6 +17,7 @@
 		CE9987AD201340D3004E37B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987AB201340D3004E37B3 /* Main.storyboard */; };
 		CE9987AF201340D3004E37B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9987AE201340D3004E37B3 /* Assets.xcassets */; };
 		CE9987B2201340D3004E37B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987B0201340D3004E37B3 /* LaunchScreen.storyboard */; };
+		CEAF3B29227C8CE700F80668 /* ScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */; };
 		CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC260C52135A01F0046BF7D /* NetworkUtils.swift */; };
 		CECC4763212452300061CA27 /* HttpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4762212452300061CA27 /* HttpUtils.swift */; };
 		CECC4765212472AE0061CA27 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4764212472AE0061CA27 /* Config.swift */; };
@@ -50,6 +51,7 @@
 		CE9987AE201340D3004E37B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9987B1201340D3004E37B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9987B3201340D3004E37B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeViewController.swift; sourceTree = "<group>"; };
 		CEC260C52135A01F0046BF7D /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		CECC4762212452300061CA27 /* HttpUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtils.swift; sourceTree = "<group>"; };
 		CECC4764212472AE0061CA27 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				CE1758A7217625D400D2CE80 /* WdViewController.swift */,
 				CE9987A9201340D3004E37B3 /* ViewController.swift */,
 				CE7C8CC120190AB7009A67E7 /* WebViewController.swift */,
+				CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */,
 				CECC4765212472AE0061CA27 /* Config.swift in Sources */,
 				CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */,
+				CEAF3B29227C8CE700F80668 /* ScopeViewController.swift in Sources */,
 				CE4D6CE621D3C5C600D1B3F4 /* BaseViewController.swift in Sources */,
 				CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */,
 				CECC4763212452300061CA27 /* HttpUtils.swift in Sources */,
