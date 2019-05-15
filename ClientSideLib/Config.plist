@@ -11,7 +11,7 @@
 	<key>mcc_value</key>
 	<string>903</string>
 	<key>server_endpoint</key>
-	<string>http://3.8.5.176:8080/mobile-connect/server_side_api/start_discovery</string>
+	<string>http://172.19.2.20:8080/server_side_api/start_discovery</string>
 	<key>server_endpoint_wd</key>
 	<string>http://3.8.5.176:8080/mobile-connect/server_side_api/start_discovery_manually</string>
 	<key>msisdn</key>

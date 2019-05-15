@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class ScopeViewContrioller: BaseViewController {
+class ScopeViewController: BaseViewController {
     // The sample values
     
     @IBOutlet weak var openid: UISwitch!
@@ -26,6 +26,34 @@ class ScopeViewContrioller: BaseViewController {
     
     func getSwitches() -> [UISwitch] {
         return [openid, mcAttrVmShareHash, mcAttrVmShare, mcMnvValidate, mcMnvValidatePlus, mcIndiaTc];
+    }
+    
+    func getSwitchOn(switchArray: [UISwitch]) -> UISwitch {
+        for switchElement in switchArray {
+            if (switchElement.isOn) {
+                return switchElement;
+            }
+        }
+        return openid;
+    }
+    
+    func getSwitchedScope() -> String {
+        switch getSwitchOn(switchArray: getSwitches()) {
+        case openid:
+            return "openid";
+        case mcAttrVmShare:
+            return "openid mc_attr_vm_share";
+        case mcAttrVmShareHash:
+            return "openid mc_attr_vm_share_hash";
+        case mcMnvValidate:
+            return "openid mc_mnv_validate";
+        case mcMnvValidatePlus:
+            return "openid mc_mnv_validate_plus";
+        case mcIndiaTc:
+            return "openid mc_india_tc";
+        default:
+            return "openid";
+        }
     }
     
     func setSwitches(switchOn: UISwitch, switchArray: [UISwitch]){
@@ -59,4 +87,11 @@ class ScopeViewContrioller: BaseViewController {
         setSwitches(switchOn: mcIndiaTc, switchArray: getSwitches())
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? ViewController
+            else {
+                return
+        }
+        viewController.scope = getSwitchedScope()
+    }
 }

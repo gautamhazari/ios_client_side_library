@@ -24,6 +24,7 @@ class HttpUtils {
     private static func createRequestFromUrl(url: URL?) -> URLRequest {
         var aRequest = URLRequest(url: url!)
         aRequest.setValue(iosVersion, forHTTPHeaderField: VERS_HEADER)
+        aRequest.setValue(NSUUID().uuidString, forHTTPHeaderField: X_REQUEST_ID)
         return aRequest
     }
 }
