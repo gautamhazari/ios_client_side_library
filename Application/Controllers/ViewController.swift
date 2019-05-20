@@ -8,7 +8,8 @@ class ViewController: BaseViewController {
     var isMsisdnRequest: Bool = false
     var isMccMncRequest: Bool = false
     var isWithIP: Bool = false
-    var scope = ""
+    var scope = OPENID
+    var version = MC_V1_1
     
     @IBOutlet weak var msisdnField: UITextField!
     @IBOutlet weak var discoveryRequestParameters: UISegmentedControl!
@@ -89,11 +90,11 @@ class ViewController: BaseViewController {
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         if(isMsisdnRequest) {
-            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope)
+            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version)
         } else if (isMccMncRequest) {
-            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope)
+            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version)
         } else {
-            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope)
+            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version)
         }
         request = HttpUtils.createRequestWithParams(url:config.getEndpoint(), params:parameters)
     }

@@ -6,6 +6,7 @@ class BaseWebController: UIViewController, WKNavigationDelegate  {
     var config = Config()
     var timeOut: Timer!
     
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
         self.timeOut.invalidate()
         if let text = webView.url?.absoluteString{

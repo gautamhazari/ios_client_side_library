@@ -43,7 +43,7 @@ class NetworkUtils {
         return(EMPTY, EMPTY)
     }
     
-    static func requestConstructor(msisdn: String? = nil, mcc: String? = nil, mnc: String? = nil, sourceIp: String? = nil, subId: String? = nil, scope: String? = nil)-> [String : String] {
+    static func requestConstructor(msisdn: String? = nil, mcc: String? = nil, mnc: String? = nil, sourceIp: String? = nil, subId: String? = nil, scope: String? = nil, version: String? = nil)-> [String : String] {
         var parameters : [String : String] = [:]
         if let msisdn = msisdn {
             parameters[MSISDN] = msisdn
@@ -62,6 +62,9 @@ class NetworkUtils {
         }
         if let scope = scope {
             parameters[SCOPE] = scope
+        }
+        if let version = version {
+            parameters[VERSION] = version
         }
         return parameters
     }

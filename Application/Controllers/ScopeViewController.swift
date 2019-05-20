@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class ScopeViewController: BaseViewController {
+class ScopeViewController: BaseScopeViewController {
     // The sample values
     
     @IBOutlet weak var openid: UISwitch!
@@ -24,6 +24,13 @@ class ScopeViewController: BaseViewController {
         setSwitches(switchOn: openid, switchArray: getSwitches());
     }
     
+    func setSwitches(switchOn: UISwitch, switchArray: [UISwitch]){
+        for switchElement in switchArray {
+            switchElement.isOn = false;
+        }
+        switchOn.isOn = true;
+    }
+    
     func getSwitches() -> [UISwitch] {
         return [openid, mcAttrVmShareHash, mcAttrVmShare, mcMnvValidate, mcMnvValidatePlus, mcIndiaTc];
     }
@@ -37,30 +44,23 @@ class ScopeViewController: BaseViewController {
         return openid;
     }
     
-    func getSwitchedScope() -> String {
+    override func getSwitchedScope() -> String {
         switch getSwitchOn(switchArray: getSwitches()) {
         case openid:
-            return "openid";
+            return OPENID;
         case mcAttrVmShare:
-            return "openid mc_attr_vm_share";
+            return MC_ATTR_VM_SHARE;
         case mcAttrVmShareHash:
-            return "openid mc_attr_vm_share_hash";
+            return MC_ATTR_VM_HASH;
         case mcMnvValidate:
-            return "openid mc_mnv_validate";
+            return MC_MMV_VALIDATE;
         case mcMnvValidatePlus:
-            return "openid mc_mnv_validate_plus";
+            return MC_MMV_VALIDATE_PLUS;
         case mcIndiaTc:
-            return "openid mc_india_tc";
+            return MC_INDIA_TC;
         default:
-            return "openid";
+            return OPENID;
         }
-    }
-    
-    func setSwitches(switchOn: UISwitch, switchArray: [UISwitch]){
-        for switchElement in switchArray {
-            switchElement.isOn = false;
-        }
-        switchOn.isOn = true;
     }
     
     @IBAction func openid(_ sender: Any, forEvent event: UIEvent) {
@@ -85,13 +85,5 @@ class ScopeViewController: BaseViewController {
     
     @IBAction func mcIndiaTc(_ sender: Any, forEvent event: UIEvent) {
         setSwitches(switchOn: mcIndiaTc, switchArray: getSwitches())
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController = segue.destination as? ViewController
-            else {
-                return
-        }
-        viewController.scope = getSwitchedScope()
     }
 }

@@ -10,8 +10,10 @@ class WebViewController: BaseWebController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         ResultWebView.navigationDelegate = self
+        // NSUUID().uuidString
+        //request.setValue("qweryhghgh", forHTTPHeaderField: X_REQUEST_ID)
         ResultWebView.load(request)
-    }  
+    }
 
 }
 

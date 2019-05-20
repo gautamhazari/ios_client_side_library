@@ -34,5 +34,4 @@ class BaseViewController: UIViewController, WKUIDelegate {
     var webView: WKWebView!
     var config = Config()
     var request: URLRequest!;
-
 }
