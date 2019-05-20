@@ -17,6 +17,7 @@ public let SOURCE_IP = "sourceIp"
 public let SUB_ID = "subscriberId"
 public let SCOPE = "scope"
 public let VERSION = "version"
+public let DISCOVERY = "discovery"
 public let OK = "Ok"
 public let ERROR = "Error"
 public let SUCCESS = "Success"
@@ -53,3 +54,8 @@ public let PHONE = "openid phone"
 public let OFFLINE_ACCESS = "openid offline_access"
 public let AUTHN = "openid mc_authn";
 public let AUTHZ = "openid mc_authz";
+
+public let COMMON_DISCOVERY = "https://discover.mobileconnect.io"
+public let DUBLIN_DISCOVERY = "https://dublin.discover.mobileconnect.io"
+public let SINGAPORE_DISCOVERY = "https://singapore.discover.mobileconnect.io"
+public let INDIA_DISCOVERY = "https://india.discover.mobileconnect.io"

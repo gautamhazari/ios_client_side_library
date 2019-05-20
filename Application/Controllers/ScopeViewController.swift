@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class ScopeViewController: BaseScopeViewController {
+class ScopeViewController: BaseSwitchViewController {
     // The sample values
     
     @IBOutlet weak var openid: UISwitch!
@@ -24,11 +24,9 @@ class ScopeViewController: BaseScopeViewController {
         setSwitches(switchOn: openid, switchArray: getSwitches());
     }
     
-    func setSwitches(switchOn: UISwitch, switchArray: [UISwitch]){
-        for switchElement in switchArray {
-            switchElement.isOn = false;
-        }
-        switchOn.isOn = true;
+    override func setSwitches(switchOn: UISwitch, switchArray: [UISwitch]) {
+        super.setSwitches(switchOn: switchOn, switchArray: switchArray)
+        scope = getSwitchedOption()
     }
     
     func getSwitches() -> [UISwitch] {
@@ -44,7 +42,7 @@ class ScopeViewController: BaseScopeViewController {
         return openid;
     }
     
-    override func getSwitchedScope() -> String {
+    override func getSwitchedOption() -> String {
         switch getSwitchOn(switchArray: getSwitches()) {
         case openid:
             return OPENID;

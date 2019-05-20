@@ -10,6 +10,7 @@ class ViewController: BaseViewController {
     var isWithIP: Bool = false
     var scope = OPENID
     var version = MC_V1_1
+    var discoveryUrl = COMMON_DISCOVERY
     
     @IBOutlet weak var msisdnField: UITextField!
     @IBOutlet weak var discoveryRequestParameters: UISegmentedControl!
@@ -90,11 +91,11 @@ class ViewController: BaseViewController {
     @IBAction func getLogin(_ sender: Any) {
         var parameters : [String: String] = [:]
         if(isMsisdnRequest) {
-            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version)
+            parameters = NetworkUtils.requestConstructor(msisdn: msisdnField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version, discovery: discoveryUrl)
         } else if (isMccMncRequest) {
-            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version)
+            parameters = NetworkUtils.requestConstructor(mcc: mccField.text, mnc: mncField.text, sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version, discovery: discoveryUrl)
         } else {
-            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version)
+            parameters = NetworkUtils.requestConstructor(sourceIp: isWithIP ? ipAddressField.text : nil, scope: scope, version: version, discovery: discoveryUrl)
         }
         request = HttpUtils.createRequestWithParams(url:config.getEndpoint(), params:parameters)
     }

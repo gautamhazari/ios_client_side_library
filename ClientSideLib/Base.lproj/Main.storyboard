@@ -26,6 +26,85 @@
             </objects>
             <point key="canvasLocation" x="-1881" y="38"/>
         </scene>
+        <!--Discovery View Controller-->
+        <scene sceneID="iUR-Wy-bsQ">
+            <objects>
+                <viewController id="d8f-f7-GyL" customClass="DiscoveryViewController" customModule="ClientSideLib" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OrB-Sh-vj4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose APIX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-p7-gki">
+                                <rect key="frame" x="137" y="66" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="discover.mobileconnect.io" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uru-U6-FU0">
+                                <rect key="frame" x="71" y="116" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NgA-Et-49V">
+                                <rect key="frame" x="16" y="111" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="common:forEvent:" destination="d8f-f7-GyL" eventType="valueChanged" id="guR-P0-ELP"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e3B-81-vUO">
+                                <rect key="frame" x="16" y="150" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="dublin:forEvent:" destination="d8f-f7-GyL" eventType="valueChanged" id="Tw5-aN-ac5"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPa-gH-7wa">
+                                <rect key="frame" x="16" y="189" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="singapore:forEvent:" destination="d8f-f7-GyL" eventType="valueChanged" id="hNA-p0-dTg"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="singapore.discover.mobileconnect.io" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBG-KZ-wW0">
+                                <rect key="frame" x="71" y="194" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC0-kv-hEi">
+                                <rect key="frame" x="163" y="318" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="6wp-ht-4U5" kind="show" id="ndG-20-dJU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dublin.discover.mobileconnect.io" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO2-fb-LKX">
+                                <rect key="frame" x="71" y="155" width="251" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Wx1-SX-p8J"/>
+                    </view>
+                    <connections>
+                        <outlet property="common" destination="NgA-Et-49V" id="ijH-wM-1VQ"/>
+                        <outlet property="dublin" destination="e3B-81-vUO" id="Gny-ef-W2I"/>
+                        <outlet property="singapore" destination="tPa-gH-7wa" id="Yi9-kk-duE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIC-2U-a6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2772" y="607.64617691154433"/>
+        </scene>
         <!--Version View Controller-->
         <scene sceneID="CtM-wf-bgU">
             <objects>
@@ -87,7 +166,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Common"/>
                                 <connections>
-                                    <segue destination="6wp-ht-4U5" kind="show" id="GxN-ww-3Xe"/>
+                                    <segue destination="d8f-f7-GyL" kind="show" id="LFF-Hx-kxM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select testing mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCp-Ir-QZf">
@@ -331,35 +410,35 @@
                                 <rect key="frame" x="27" y="150" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="profile:" destination="bbn-uj-qip" eventType="valueChanged" id="qgu-rU-4We"/>
+                                    <action selector="profile:forEvent:" destination="bbn-uj-qip" eventType="valueChanged" id="oFv-H9-S1X"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="js9-Y6-bh2">
                                 <rect key="frame" x="27" y="195" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="email:" destination="bbn-uj-qip" eventType="valueChanged" id="Zwu-33-uri"/>
+                                    <action selector="email:forEvent:" destination="bbn-uj-qip" eventType="valueChanged" id="4GW-yO-IJi"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S07-Rc-IXx">
                                 <rect key="frame" x="27" y="243" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="address:" destination="bbn-uj-qip" eventType="valueChanged" id="LDj-zb-rzR"/>
+                                    <action selector="address:forEvent:" destination="bbn-uj-qip" eventType="valueChanged" id="uL3-vj-bb4"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NcG-3L-oOA">
                                 <rect key="frame" x="25" y="291" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="phone:" destination="bbn-uj-qip" eventType="valueChanged" id="8qK-XM-rCJ"/>
+                                    <action selector="phone:forEvent:" destination="bbn-uj-qip" eventType="valueChanged" id="yna-AQ-xv4"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjO-JG-hGr">
                                 <rect key="frame" x="25" y="340" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="offlineAccess:" destination="bbn-uj-qip" eventType="valueChanged" id="r3Z-eE-ubA"/>
+                                    <action selector="offlineAccess:forEvent:" destination="bbn-uj-qip" eventType="valueChanged" id="QGe-nD-BnB"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -372,6 +451,7 @@
                         <outlet property="offlineAccess" destination="hjO-JG-hGr" id="wWE-bl-OFZ"/>
                         <outlet property="openid" destination="GnJ-Cw-tpb" id="FbT-L2-TCd"/>
                         <outlet property="phone" destination="NcG-3L-oOA" id="MiP-Nr-ZKV"/>
+                        <outlet property="profile" destination="WDa-rV-YYa" id="ZKi-Ch-ePr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5W-je-kbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -848,6 +928,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ebe-qq-E8l"/>
-        <segue reference="1Q3-NP-8bL"/>
+        <segue reference="s8A-Rn-9Lc"/>
     </inferredMetricsTieBreakers>
 </document>

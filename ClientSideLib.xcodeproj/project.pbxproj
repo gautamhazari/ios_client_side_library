@@ -11,6 +11,8 @@
 		CE2867AD213435B90023A83F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2867AC213435B90023A83F /* Constants.swift */; };
 		CE286DBC2292A9DC0076CAF3 /* Scope20ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE286DBB2292A9DC0076CAF3 /* Scope20ViewController.swift */; };
 		CE286DBE2292A9FA0076CAF3 /* Scope23ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE286DBD2292A9FA0076CAF3 /* Scope23ViewController.swift */; };
+		CE286DC02292E8EE0076CAF3 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE286DBF2292E8EE0076CAF3 /* DiscoveryViewController.swift */; };
+		CE286DC22292FDA30076CAF3 /* VersionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE286DC12292FDA30076CAF3 /* VersionViewController.swift */; };
 		CE4D6CE221D3C1A100D1B3F4 /* BaseWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D6CE121D3C1A100D1B3F4 /* BaseWebController.swift */; };
 		CE4D6CE621D3C5C600D1B3F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D6CE521D3C5C600D1B3F4 /* BaseViewController.swift */; };
 		CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C8CC120190AB7009A67E7 /* WebViewController.swift */; };
@@ -21,7 +23,7 @@
 		CE9987B2201340D3004E37B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987B0201340D3004E37B3 /* LaunchScreen.storyboard */; };
 		CE9D32F4228B1E420041A394 /* Scope11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D32F3228B1E420041A394 /* Scope11ViewController.swift */; };
 		CE9D32F6228B1E5D0041A394 /* Scope2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D32F5228B1E5D0041A394 /* Scope2ViewController.swift */; };
-		CE9D32FA228B1FBA0041A394 /* BaseScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D32F9228B1FBA0041A394 /* BaseScopeViewController.swift */; };
+		CE9D32FA228B1FBA0041A394 /* BaseSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D32F9228B1FBA0041A394 /* BaseSwitchViewController.swift */; };
 		CEAF3B29227C8CE700F80668 /* ScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */; };
 		CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC260C52135A01F0046BF7D /* NetworkUtils.swift */; };
 		CECC4763212452300061CA27 /* HttpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4762212452300061CA27 /* HttpUtils.swift */; };
@@ -48,6 +50,8 @@
 		CE2867AC213435B90023A83F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE286DBB2292A9DC0076CAF3 /* Scope20ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope20ViewController.swift; sourceTree = "<group>"; };
 		CE286DBD2292A9FA0076CAF3 /* Scope23ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope23ViewController.swift; sourceTree = "<group>"; };
+		CE286DBF2292E8EE0076CAF3 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		CE286DC12292FDA30076CAF3 /* VersionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionViewController.swift; sourceTree = "<group>"; };
 		CE4D6CE121D3C1A100D1B3F4 /* BaseWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebController.swift; sourceTree = "<group>"; };
 		CE4D6CE521D3C5C600D1B3F4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE7C8CC120190AB7009A67E7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +64,7 @@
 		CE9987B3201340D3004E37B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9D32F3228B1E420041A394 /* Scope11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope11ViewController.swift; sourceTree = "<group>"; };
 		CE9D32F5228B1E5D0041A394 /* Scope2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope2ViewController.swift; sourceTree = "<group>"; };
-		CE9D32F9228B1FBA0041A394 /* BaseScopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScopeViewController.swift; sourceTree = "<group>"; };
+		CE9D32F9228B1FBA0041A394 /* BaseSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwitchViewController.swift; sourceTree = "<group>"; };
 		CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeViewController.swift; sourceTree = "<group>"; };
 		CEC260C52135A01F0046BF7D /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		CECC4762212452300061CA27 /* HttpUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtils.swift; sourceTree = "<group>"; };
@@ -135,9 +139,11 @@
 				CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */,
 				CE9D32F3228B1E420041A394 /* Scope11ViewController.swift */,
 				CE9D32F5228B1E5D0041A394 /* Scope2ViewController.swift */,
-				CE9D32F9228B1FBA0041A394 /* BaseScopeViewController.swift */,
+				CE9D32F9228B1FBA0041A394 /* BaseSwitchViewController.swift */,
 				CE286DBB2292A9DC0076CAF3 /* Scope20ViewController.swift */,
 				CE286DBD2292A9FA0076CAF3 /* Scope23ViewController.swift */,
+				CE286DBF2292E8EE0076CAF3 /* DiscoveryViewController.swift */,
+				CE286DC12292FDA30076CAF3 /* VersionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				CE4D6CE221D3C1A100D1B3F4 /* BaseWebController.swift in Sources */,
 				CE7C8CC220190AB7009A67E7 /* WebViewController.swift in Sources */,
 				CECC4765212472AE0061CA27 /* Config.swift in Sources */,
+				CE286DC02292E8EE0076CAF3 /* DiscoveryViewController.swift in Sources */,
 				CE286DBE2292A9FA0076CAF3 /* Scope23ViewController.swift in Sources */,
 				CE1758A8217625D400D2CE80 /* WdViewController.swift in Sources */,
 				CEAF3B29227C8CE700F80668 /* ScopeViewController.swift in Sources */,
@@ -245,7 +252,8 @@
 				CE9D32F4228B1E420041A394 /* Scope11ViewController.swift in Sources */,
 				CE9D32F6228B1E5D0041A394 /* Scope2ViewController.swift in Sources */,
 				CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */,
-				CE9D32FA228B1FBA0041A394 /* BaseScopeViewController.swift in Sources */,
+				CE9D32FA228B1FBA0041A394 /* BaseSwitchViewController.swift in Sources */,
+				CE286DC22292FDA30076CAF3 /* VersionViewController.swift in Sources */,
 				CE286DBC2292A9DC0076CAF3 /* Scope20ViewController.swift in Sources */,
 				CE2867AD213435B90023A83F /* Constants.swift in Sources */,
 			);
