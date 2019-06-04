@@ -55,7 +55,7 @@ public let OFFLINE_ACCESS = "openid offline_access"
 public let AUTHN = "openid mc_authn";
 public let AUTHZ = "openid mc_authz";
 
-public let COMMON_DISCOVERY = "https://discover.mobileconnect.io"
-public let DUBLIN_DISCOVERY = "https://dublin.discover.mobileconnect.io"
-public let SINGAPORE_DISCOVERY = "https://singapore.discover.mobileconnect.io"
-public let INDIA_DISCOVERY = "https://india.discover.mobileconnect.io"
+public let COMMON_DISCOVERY = "https://discover.mobileconnect.io/gsma/v2/discovery"
+public let DUBLIN_DISCOVERY = "https://dublin.discover.mobileconnect.io/gsma/v2/discovery"
+public let SINGAPORE_DISCOVERY = "https://singapore.discover.mobileconnect.io/gsma/v2/discovery"
+public let INDIA_DISCOVERY = "https://india.discover.mobileconnect.io/gsma/v2/discovery"

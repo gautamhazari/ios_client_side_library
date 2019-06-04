@@ -18,10 +18,13 @@ class ScopeViewController: BaseSwitchViewController {
     @IBOutlet weak var mcMnvValidate: UISwitch!
     @IBOutlet weak var mcMnvValidatePlus: UISwitch!
     @IBOutlet weak var mcIndiaTc: UISwitch!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad();
         setSwitches(switchOn: openid, switchArray: getSwitches());
+        self.discoveryUrl = INDIA_DISCOVERY
+        
     }
     
     override func setSwitches(switchOn: UISwitch, switchArray: [UISwitch]) {
