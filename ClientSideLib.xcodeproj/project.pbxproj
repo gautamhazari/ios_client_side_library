@@ -21,13 +21,14 @@
 		CE9987AD201340D3004E37B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987AB201340D3004E37B3 /* Main.storyboard */; };
 		CE9987AF201340D3004E37B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9987AE201340D3004E37B3 /* Assets.xcassets */; };
 		CE9987B2201340D3004E37B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9987B0201340D3004E37B3 /* LaunchScreen.storyboard */; };
-		CE9D32F4228B1E420041A394 /* Scope11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D32F3228B1E420041A394 /* Scope11ViewController.swift */; };
 		CE9D32F6228B1E5D0041A394 /* Scope2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D32F5228B1E5D0041A394 /* Scope2ViewController.swift */; };
-		CE9D32FA228B1FBA0041A394 /* BaseSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D32F9228B1FBA0041A394 /* BaseSwitchViewController.swift */; };
 		CEAF3B29227C8CE700F80668 /* ScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */; };
 		CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC260C52135A01F0046BF7D /* NetworkUtils.swift */; };
 		CECC4763212452300061CA27 /* HttpUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4762212452300061CA27 /* HttpUtils.swift */; };
 		CECC4765212472AE0061CA27 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC4764212472AE0061CA27 /* Config.swift */; };
+		CED91B1522AE9082000E1E50 /* BaseSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED91B1422AE9082000E1E50 /* BaseSwitchViewController.swift */; };
+		CED91B1722AE9318000E1E50 /* Scope2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED91B1622AE9318000E1E50 /* Scope2ViewController.swift */; };
+		CED91B1922AE99F0000E1E50 /* Scope11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED91B1822AE99F0000E1E50 /* Scope11ViewController.swift */; };
 		CEE506DF2044865A00C556DD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE506DE2044865A00C556DD /* Config.plist */; };
 		CEF6B064225F67230056DAE2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF6B063225F67230056DAE2 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -62,13 +63,14 @@
 		CE9987AE201340D3004E37B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9987B1201340D3004E37B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9987B3201340D3004E37B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE9D32F3228B1E420041A394 /* Scope11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope11ViewController.swift; sourceTree = "<group>"; };
 		CE9D32F5228B1E5D0041A394 /* Scope2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope2ViewController.swift; sourceTree = "<group>"; };
-		CE9D32F9228B1FBA0041A394 /* BaseSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwitchViewController.swift; sourceTree = "<group>"; };
 		CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeViewController.swift; sourceTree = "<group>"; };
 		CEC260C52135A01F0046BF7D /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		CECC4762212452300061CA27 /* HttpUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtils.swift; sourceTree = "<group>"; };
 		CECC4764212472AE0061CA27 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CED91B1422AE9082000E1E50 /* BaseSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwitchViewController.swift; sourceTree = "<group>"; };
+		CED91B1622AE9318000E1E50 /* Scope2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope2ViewController.swift; sourceTree = "<group>"; };
+		CED91B1822AE99F0000E1E50 /* Scope11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope11ViewController.swift; sourceTree = "<group>"; };
 		CEE506DE2044865A00C556DD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		CEF6B063225F67230056DAE2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -137,13 +139,14 @@
 				CE9987A9201340D3004E37B3 /* ViewController.swift */,
 				CE7C8CC120190AB7009A67E7 /* WebViewController.swift */,
 				CEAF3B28227C8CE700F80668 /* ScopeViewController.swift */,
-				CE9D32F3228B1E420041A394 /* Scope11ViewController.swift */,
+				CED91B1822AE99F0000E1E50 /* Scope11ViewController.swift */,
 				CE9D32F5228B1E5D0041A394 /* Scope2ViewController.swift */,
-				CE9D32F9228B1FBA0041A394 /* BaseSwitchViewController.swift */,
 				CE286DBB2292A9DC0076CAF3 /* Scope20ViewController.swift */,
 				CE286DBD2292A9FA0076CAF3 /* Scope23ViewController.swift */,
 				CE286DBF2292E8EE0076CAF3 /* DiscoveryViewController.swift */,
 				CE286DC12292FDA30076CAF3 /* VersionViewController.swift */,
+				CED91B1422AE9082000E1E50 /* BaseSwitchViewController.swift */,
+				CED91B1622AE9318000E1E50 /* Scope2ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,11 +252,12 @@
 				CE4D6CE621D3C5C600D1B3F4 /* BaseViewController.swift in Sources */,
 				CE9987A8201340D3004E37B3 /* AppDelegate.swift in Sources */,
 				CECC4763212452300061CA27 /* HttpUtils.swift in Sources */,
-				CE9D32F4228B1E420041A394 /* Scope11ViewController.swift in Sources */,
+				CED91B1522AE9082000E1E50 /* BaseSwitchViewController.swift in Sources */,
+				CED91B1922AE99F0000E1E50 /* Scope11ViewController.swift in Sources */,
 				CE9D32F6228B1E5D0041A394 /* Scope2ViewController.swift in Sources */,
 				CEC260C62135A01F0046BF7D /* NetworkUtils.swift in Sources */,
-				CE9D32FA228B1FBA0041A394 /* BaseSwitchViewController.swift in Sources */,
 				CE286DC22292FDA30076CAF3 /* VersionViewController.swift in Sources */,
+				CED91B1722AE9318000E1E50 /* Scope2ViewController.swift in Sources */,
 				CE286DBC2292A9DC0076CAF3 /* Scope20ViewController.swift in Sources */,
 				CE2867AD213435B90023A83F /* Constants.swift in Sources */,
 			);
